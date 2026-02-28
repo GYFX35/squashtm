@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Medical Assistant | Sexual Health Platform</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f9;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background: #2c3e50;
+            color: #fff;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        nav {
+            background: #34495e;
+            color: #fff;
+            padding: 0.5rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 1rem;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            flex: 1;
+            width: 80%;
+            max-width: 900px;
+            margin: 2rem auto;
+            overflow: hidden;
+        }
+        section {
+            background: #fff;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #2980b9;
+            border-bottom: 2px solid #2980b9;
+            padding-bottom: 0.5rem;
+        }
+        .disclaimer {
+            background-color: #fff3cd;
+            border: 1px solid #ffeeba;
+            color: #856404;
+            padding: 1rem;
+            border-radius: 4px;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+        }
+        .chat-container {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+        }
+        .chat-messages {
+            flex: 1;
+            padding: 1rem;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .message {
+            max-width: 80%;
+            padding: 0.8rem 1rem;
+            border-radius: 15px;
+            font-size: 0.95rem;
+        }
+        .message.ai {
+            background: #ecf0f1;
+            align-self: flex-start;
+            border-bottom-left-radius: 2px;
+        }
+        .message.user {
+            background: #2980b9;
+            color: #fff;
+            align-self: flex-end;
+            border-bottom-right-radius: 2px;
+        }
+        .chat-input {
+            display: flex;
+            padding: 1rem;
+            border-top: 1px solid #ddd;
+            gap: 0.5rem;
+        }
+        .chat-input input {
+            flex: 1;
+            padding: 0.8rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            outline: none;
+        }
+        .chat-input button {
+            background: #2980b9;
+            color: #fff;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .chat-input button:hover {
+            background: #1f6391;
+        }
+        footer {
+            background: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>AI Medical Consultant & Assistant</h1>
+    <p>Empowering You with Knowledge and Support</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="ai-assistant.html">AI Assistant</a>
+    <a href="biotech.html">Biotech</a>
+    <a href="podcast.html">Podcasts</a>
+</nav>
+
+<div class="container">
+    <div class="disclaimer">
+        <strong>IMPORTANT MEDICAL DISCLAIMER:</strong> This AI Medical Assistant is for informational purposes only and does NOT provide medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition. Never disregard professional medical advice or delay in seeking it because of something you have read on this platform. If you think you may have a medical emergency, call your doctor or emergency services immediately.
+    </div>
+
+    <section id="ai-chat">
+        <h2>Consult with our AI Assistant</h2>
+        <p>Ask questions about sexual health, prevention, or general wellness. Our AI is trained to provide helpful information and guide you to appropriate resources.</p>
+
+        <div class="chat-container">
+            <div class="chat-messages" id="chat-messages">
+                <div class="message ai">
+                    Hello! I'm your AI Medical Assistant. How can I help you today?
+                </div>
+            </div>
+            <form class="chat-input" id="chat-form">
+                <input type="text" id="user-input" placeholder="Type your message here..." required autocomplete="off">
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="how-it-works">
+        <h2>How it Works</h2>
+        <p>Our AI Assistant uses advanced natural language processing to understand your concerns and provide evidence-based information from trusted sources like the WHO and CDC.</p>
+        <ul>
+            <li><strong>Anonymity:</strong> Your conversations are private and we do not store personal identifying information.</li>
+            <li><strong>Resource Guidance:</strong> It can help you find local clinics, testing centers, and support groups.</li>
+            <li><strong>Education:</strong> Get clear explanations about STIs, contraception, and healthy relationships.</li>
+        </ul>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2026 Global Sexual Health Initiative. All rights reserved.</p>
+</footer>
+
+<script>
+    const chatForm = document.getElementById('chat-form');
+    const chatMessages = document.getElementById('chat-messages');
+    const userInput = document.getElementById('user-input');
+
+    const mockResponses = [
+        "That's an important question. Regarding sexual health, the best way to prevent STIs is through consistent and correct use of protection.",
+        "It's always a good idea to get regular screenings. Would you like me to help you find a testing center nearby?",
+        "I understand your concern. While I can provide general information, I strongly recommend consulting with a healthcare professional for a personalized assessment.",
+        "Remember that many STIs are asymptomatic, which is why routine testing is so crucial for everyone who is sexually active.",
+        "You can find more detailed information on our Resources page, which links to official WHO and CDC guidelines."
+    ];
+
+    chatForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const messageText = userInput.value.trim();
+        if (messageText) {
+            // Add user message
+            addMessage(messageText, 'user');
+            userInput.value = '';
+
+            // Simulate AI response
+            setTimeout(() => {
+                const randomResponse = mockResponses[Math.floor(Math.random() * mockResponses.length)];
+                addMessage(randomResponse, 'ai');
+            }, 1000);
+        }
+    });
+
+    function addMessage(text, sender) {
+        const messageDiv = document.createElement('div');
+        messageDiv.classList.add('message', sender);
+        messageDiv.textContent = text;
+        chatMessages.appendChild(messageDiv);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+</script>
+
+</body>
+</html>
