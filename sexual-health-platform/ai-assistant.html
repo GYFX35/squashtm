@@ -138,8 +138,8 @@
 <body>
 
 <header>
-    <h1>AI Medical Consultant & Assistant</h1>
-    <p>Empowering You with Knowledge and Support</p>
+    <h1>AI Medical Assistant & Diagnostic Consultant</h1>
+    <p>Empowering You with Knowledge, Support, and Diagnostic Guidance</p>
 </header>
 
 <nav>
@@ -158,7 +158,7 @@
 
     <section id="ai-chat">
         <h2>Consult with our AI Assistant</h2>
-        <p>Ask questions about sexual health, prevention, or general wellness. Our AI is trained to provide helpful information and guide you to appropriate resources.</p>
+        <p>Ask questions about sexual health, prevention, or general wellness. Our AI is trained to provide helpful information, diagnostic guidance, and guide you to appropriate resources.</p>
 
         <div class="chat-container">
             <div class="chat-messages" id="chat-messages">
@@ -173,12 +173,32 @@
         </div>
     </section>
 
+    <section id="diagnostic-support">
+        <h2>AI-Powered Diagnostic Support</h2>
+        <p>Our assistant now includes enhanced diagnostic capabilities to help you understand your symptoms and risks more clearly.</p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1rem;">
+            <div style="background: #eef7fd; padding: 1rem; border-radius: 8px; border-left: 4px solid #2980b9;">
+                <h3>Symptom Analysis</h3>
+                <p>Describe your symptoms anonymously and receive a detailed breakdown of potential causes based on medical data.</p>
+            </div>
+            <div style="background: #eef7fd; padding: 1rem; border-radius: 8px; border-left: 4px solid #2980b9;">
+                <h3>Risk Assessment</h3>
+                <p>Evaluate your risk level for various STIs based on your recent activity and health history.</p>
+            </div>
+            <div style="background: #eef7fd; padding: 1rem; border-radius: 8px; border-left: 4px solid #2980b9;">
+                <h3>Test Recommendations</h3>
+                <p>Get personalized advice on which tests you should consider and how soon you should get them.</p>
+            </div>
+        </div>
+    </section>
+
     <section id="how-it-works">
         <h2>How it Works</h2>
-        <p>Our AI Assistant uses advanced natural language processing to understand your concerns and provide evidence-based information from trusted sources like the WHO and CDC.</p>
+        <p>Our AI Assistant uses advanced natural language processing to understand your concerns and provide evidence-based information and diagnostic guidance from trusted sources like the WHO and CDC.</p>
         <ul>
             <li><strong>Anonymity:</strong> Your conversations are private and we do not store personal identifying information.</li>
-            <li><strong>Resource Guidance:</strong> It can help you find local clinics, testing centers, and support groups.</li>
+            <li><strong>Diagnostic Intelligence:</strong> Trained on extensive medical datasets to provide accurate symptom and risk analysis.</li>
+            <li><strong>Resource Guidance:</strong> It can help you find local clinics, testing centers, and support groups based on your needs.</li>
             <li><strong>Education:</strong> Get clear explanations about STIs, contraception, and healthy relationships.</li>
         </ul>
     </section>
@@ -194,10 +214,12 @@
     const userInput = document.getElementById('user-input');
 
     const mockResponses = [
+        "Based on the symptoms you've described, there are several possibilities. Some conditions share similar presentations, so a physical exam is often necessary for a definitive diagnosis.",
         "That's an important question. Regarding sexual health, the best way to prevent STIs is through consistent and correct use of protection.",
         "It's always a good idea to get regular screenings. Would you like me to help you find a testing center nearby?",
-        "I understand your concern. While I can provide general information, I strongly recommend consulting with a healthcare professional for a personalized assessment.",
-        "Remember that many STIs are asymptomatic, which is why routine testing is so crucial for everyone who is sexually active.",
+        "I understand your concern. My diagnostic analysis suggests that you should consider a full STI panel, including tests for Chlamydia and Gonorrhea, given your description.",
+        "I understand your concern. While I can provide general information and diagnostic guidance, I strongly recommend consulting with a healthcare professional for a personalized assessment.",
+        "Remember that many STIs are asymptomatic, which is why routine testing and risk assessment are so crucial for everyone who is sexually active.",
         "You can find more detailed information on our Resources page, which links to official WHO and CDC guidelines."
     ];
 
