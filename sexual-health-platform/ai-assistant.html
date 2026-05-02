@@ -4,151 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Medical Assistant | Sexual Health Platform</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            background-color: #f4f4f9;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        header {
-            background: #2c3e50;
-            color: #fff;
-            padding: 2rem 1rem;
-            text-align: center;
-        }
-        nav {
-            background: #34495e;
-            color: #fff;
-            padding: 0.5rem;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        nav a {
-            color: #fff;
-            margin: 0 1rem;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        .container {
-            flex: 1;
-            width: 80%;
-            max-width: 900px;
-            margin: 2rem auto;
-            overflow: hidden;
-        }
-        section {
-            background: #fff;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        h2 {
-            color: #2980b9;
-            border-bottom: 2px solid #2980b9;
-            padding-bottom: 0.5rem;
-        }
-        .disclaimer {
-            background-color: #fff3cd;
-            border: 1px solid #ffeeba;
-            color: #856404;
-            padding: 1rem;
-            border-radius: 4px;
-            margin-bottom: 1.5rem;
-            font-size: 0.9rem;
-        }
-        .chat-container {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            height: 400px;
-            display: flex;
-            flex-direction: column;
-            background: #fff;
-        }
-        .chat-messages {
-            flex: 1;
-            padding: 1rem;
-            overflow-y: auto;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-        .message {
-            max-width: 80%;
-            padding: 0.8rem 1rem;
-            border-radius: 15px;
-            font-size: 0.95rem;
-        }
-        .message.ai {
-            background: #ecf0f1;
-            align-self: flex-start;
-            border-bottom-left-radius: 2px;
-        }
-        .message.user {
-            background: #2980b9;
-            color: #fff;
-            align-self: flex-end;
-            border-bottom-right-radius: 2px;
-        }
-        .chat-input {
-            display: flex;
-            padding: 1rem;
-            border-top: 1px solid #ddd;
-            gap: 0.5rem;
-        }
-        .chat-input input {
-            flex: 1;
-            padding: 0.8rem;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            outline: none;
-        }
-        .chat-input button {
-            background: #2980b9;
-            color: #fff;
-            border: none;
-            padding: 0.8rem 1.5rem;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-        .chat-input button:hover {
-            background: #1f6391;
-        }
-        footer {
-            background: #2c3e50;
-            color: #fff;
-            text-align: center;
-            padding: 1.5rem;
-            margin-top: 2rem;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="theme-blue">
 
 <header>
-    <h1>AI Medical Assistant & Diagnostic Consultant</h1>
-    <p>Empowering You with Knowledge, Support, and Diagnostic Guidance</p>
+    <div class="header-content">
+        <h1>AI Medical Assistant & Diagnostic Consultant</h1>
+        <p>Empowering You with Knowledge, Support, and Diagnostic Guidance</p>
+    </div>
 </header>
 
 <nav>
-    <a href="index.html">Home</a>
-    <a href="ai-assistant.html">AI Assistant</a>
-    <a href="biotech.html">Biotech</a>
-    <a href="podcast.html">Podcasts</a>
-    <a href="videos.html">Videos</a>
-    <a href="training.html">Training</a>
+    <div class="nav-container">
+        <a href="index.html">Home</a>
+        <a href="ai-assistant.html" class="active">AI Assistant</a>
+        <a href="biotech.html">Biotech</a>
+        <a href="forums.html">Forums</a>
+        <a href="podcast.html">Podcasts</a>
+        <a href="videos.html">Videos</a>
+        <a href="training.html">Training</a>
+    </div>
 </nav>
 
 <div class="container">
@@ -168,7 +47,7 @@
             </div>
             <form class="chat-input" id="chat-form">
                 <input type="text" id="user-input" placeholder="Type your message here..." required autocomplete="off">
-                <button type="submit">Send</button>
+                <button type="submit" class="cta-button">Send</button>
             </form>
         </div>
     </section>
@@ -176,16 +55,16 @@
     <section id="diagnostic-support">
         <h2>AI-Powered Diagnostic Support</h2>
         <p>Our assistant now includes enhanced diagnostic capabilities to help you understand your symptoms and risks more clearly.</p>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1rem;">
-            <div style="background: #eef7fd; padding: 1rem; border-radius: 8px; border-left: 4px solid #2980b9;">
+        <div class="info-grid">
+            <div class="card">
                 <h3>Symptom Analysis</h3>
                 <p>Describe your symptoms anonymously and receive a detailed breakdown of potential causes based on medical data.</p>
             </div>
-            <div style="background: #eef7fd; padding: 1rem; border-radius: 8px; border-left: 4px solid #2980b9;">
+            <div class="card">
                 <h3>Risk Assessment</h3>
                 <p>Evaluate your risk level for various STIs based on your recent activity and health history.</p>
             </div>
-            <div style="background: #eef7fd; padding: 1rem; border-radius: 8px; border-left: 4px solid #2980b9;">
+            <div class="card">
                 <h3>Test Recommendations</h3>
                 <p>Get personalized advice on which tests you should consider and how soon you should get them.</p>
             </div>
@@ -205,7 +84,10 @@
 </div>
 
 <footer>
-    <p>&copy; 2026 Global Sexual Health Initiative. All rights reserved.</p>
+    <div class="footer-content">
+        <p>&copy; 2026 Global Sexual Health Initiative. All rights reserved.</p>
+        <p><small>Empowering through knowledge and community support.</small></p>
+    </div>
 </footer>
 
 <script>
@@ -227,11 +109,9 @@
         e.preventDefault();
         const messageText = userInput.value.trim();
         if (messageText) {
-            // Add user message
             addMessage(messageText, 'user');
             userInput.value = '';
 
-            // Simulate AI response
             setTimeout(() => {
                 const randomResponse = mockResponses[Math.floor(Math.random() * mockResponses.length)];
                 addMessage(randomResponse, 'ai');
