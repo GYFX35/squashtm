@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Forums | Sexual Health Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- OneSignal Integration Placeholder -->
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+    <script>
+      window.OneSignal = window.OneSignal || [];
+      OneSignal.push(function() {
+        OneSignal.init({
+          appId: "YOUR_ONESIGNAL_APP_ID",
+        });
+      });
+    </script>
+</head>
+<body class="theme-purple">
+
+<header>
+    <div class="header-content">
+        <h1>Community Forums & Hub</h1>
+        <p>Connect, Share, and Learn with our Global Community</p>
+    </div>
+</header>
+
+<nav>
+    <div class="nav-container">
+        <a href="index.html">Home</a>
+        <a href="ai-assistant.html">AI Assistant</a>
+        <a href="biotech.html">Biotech</a>
+        <a href="forums.html" class="active">Forums</a>
+        <a href="podcast.html">Podcasts</a>
+        <a href="videos.html">Videos</a>
+        <a href="training.html">Training</a>
+    </div>
+</nav>
+
+<div class="container">
+    <section id="community-tools">
+        <h2>Integrated Community Tools</h2>
+        <p>We leverage industry-leading tools to provide a seamless and collaborative environment for our community members.</p>
+
+        <div class="info-grid">
+            <!-- Notion Integration -->
+            <div class="card">
+                <span class="tag">Knowledge Hub</span>
+                <h3>Notion Resources</h3>
+                <p>Access our community guidelines, shared resources, and collaborative project boards directly on Notion.</p>
+                <a href="https://www.notion.so/community-hub-placeholder" target="_blank" class="cta-button">Open Notion Hub</a>
+            </div>
+
+            <!-- Zoom Integration -->
+            <div class="card">
+                <span class="tag">Live Events</span>
+                <h3>Zoom Webinars</h3>
+                <p>Join our weekly live Q&A sessions, expert webinars, and community support groups via Zoom.</p>
+                <a href="https://zoom.us/j/community-meeting-placeholder" target="_blank" class="cta-button">Join Next Meeting</a>
+            </div>
+
+            <!-- OneSignal Info -->
+            <div class="card">
+                <span class="tag">Stay Updated</span>
+                <h3>OneSignal Notifications</h3>
+                <p>Enable push notifications to stay updated on new forum posts, upcoming events, and urgent health alerts.</p>
+                <button class="cta-button" onclick="OneSignal.showNativePrompt();">Enable Notifications</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="mailchimp-subscription">
+        <h2>Newsletter Subscription</h2>
+        <p>Subscribe to our monthly newsletter powered by Mailchimp to get the latest updates, research, and community highlights delivered to your inbox.</p>
+
+        <!-- Mailchimp Form Placeholder -->
+        <div id="mc_embed_signup">
+            <form action="#" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate">
+                <div id="mc_embed_signup_scroll">
+                    <div class="form-group">
+                        <label for="mce-EMAIL">Email Address</label>
+                        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="your@email.com" required>
+                    </div>
+                    <div class="clear">
+                        <input type="submit" value="Subscribe via Mailchimp" name="subscribe" id="mc-embedded-subscribe" class="cta-button">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section id="forum-topics">
+        <h2>Active Discussions</h2>
+        <div class="info-grid">
+            <div class="card">
+                <h3>General Health & Wellness</h3>
+                <p>Open discussions about maintaining a healthy lifestyle and general sexual health questions.</p>
+                <a href="#" class="cta-button" style="font-size: 0.8rem; padding: 0.5rem 1rem;">View Topics</a>
+            </div>
+            <div class="card">
+                <h3>Support & Recovery</h3>
+                <p>A safe space for community members to share experiences and find support from others.</p>
+                <a href="#" class="cta-button" style="font-size: 0.8rem; padding: 0.5rem 1rem;">View Topics</a>
+            </div>
+            <div class="card">
+                <h3>Innovation & Biotech</h3>
+                <p>Discuss the latest advancements in biotechnology and how they impact global health.</p>
+                <a href="#" class="cta-button" style="font-size: 0.8rem; padding: 0.5rem 1rem;">View Topics</a>
+            </div>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2026 Global Sexual Health Initiative. All rights reserved.</p>
+        <p><small>Empowering through knowledge and community support.</small></p>
+    </div>
+</footer>
+
+</body>
+</html>
